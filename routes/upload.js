@@ -1,6 +1,7 @@
 let multer = require("multer");
+let storage = multer.memoryStorage();
 let upload = multer({
-    dest:"/upload"
+    storage:storage
 })
 
 module.exports = function(app) {
